@@ -14,16 +14,6 @@ import pandas as pd
 import sqlite3
 from sqlite3 import Error
 
-# Streamlit 버전에 따라 모듈 임포트 경로를 다르게 설정합니다.
-try:
-    # Streamlit 0.65 이전 버전
-    from streamlit.ReportThread import get_report_ctx
-    from streamlit.server.Server import Server
-except ModuleNotFoundError:
-    # Streamlit 0.65 이후 버전
-    from streamlit.report_thread import get_report_ctx
-    from streamlit.server.server import Server
-
 # 데이터베이스 파일의 위치를 설정합니다.
 DATABASE_FILE_LOCATION = os.getcwd()+"\pythonsqlite.db" 
 
